@@ -22,7 +22,9 @@
     "build": "npm run clean && tsc && cp package.json README.md ./src/index.css ./src/App.css ./dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "changelog": "auto changelog",
+    "release": "auto shipit --base-branch=master"
   },
   "eslintConfig": {
     "extends": [
