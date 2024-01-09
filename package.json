@@ -18,9 +18,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "changelog": "auto changelog",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./src/index.css ./src/App.css ./dist",
+    "release": "auto shipit --base-branch=master"
   },
   "eslintConfig": {
     "extends": [
