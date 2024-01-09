@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "@carolien-heymans/testpackage",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +10,7 @@
     "@types/node": "^16.18.70",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "auto": "^11.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc && cp package.json README.md ./src/index.css ./src/App.css",
+    "build": "npm run clean && tsc && cp package.json README.md ./src/index.css ./src/App.css ./dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf dist"
@@ -43,5 +44,23 @@
   },
   "publishConfig": {
     "@carolien-heymans:registry": "https://npm.pkg.github.com"
-  }
+  },
+  "devDependencies": {
+    "auto": "^10.42.0",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "webpack": "^5.74.0"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolien-heymans/testpackage.git"
+  },
+  "author": "carolien-heymans",
+  "license": "ISC"
 }
